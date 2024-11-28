@@ -1,0 +1,55 @@
+/* Popup-styling */
+.modal {
+    display: none; /* Skjuler popup som standard */
+    position: fixed; /* Fikser popup i midten av vinduet */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Gjennomsiktig bakgrunn */
+    z-index: 1000;
+    overflow: auto; /* Tillater scrolling for langt innhold */
+}
+
+/* Innholdsstyling for popup */
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 30px;
+    background-color: #fff;
+    width: 85%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Tillater scrolling i popup */
+    max-height: 90vh; /* Begrens høyden til 90% av vinduet */
+}
+
+/* Lukk-knapp */
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: red;
+}
+
+/* Bilder i popup-vinduene */
+.modal-content img {
+    display: block; /* Sørger for at bildet oppfører seg som et blokk-element */
+    margin: 20px auto; /* Sentraliserer bildet i popup-vinduet */
+    max-width: 90%; /* Sørger for at bildet ikke overskrider bredden av popup-vinduet */
+    height: auto; /* Bevarer proporsjonene */
+    border-radius: 10px; /* Gir mykere hjørner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Legger til en skygge rundt bildet */
+    transition: transform 0.2s ease; /* Legger til en liten animasjon ved hover */
+}
+
+.modal-content img:hover {
+    transform: scale(1.05); /* Forstørrer bildet litt ved hover */
+}
